@@ -65,12 +65,7 @@ class SalaryPayoutProcessor extends SalaryPayout{
 class Application {
     public static void main(String[] args){
 
-        SalaryPayout processor = new SalaryPayout() {
-            @Override
-            protected void payout() {
-
-            }
-        };
+        SalaryPayout processor = new SalaryPayoutProcessor();
 
         Employee fixedEmployee = new FixedAndBonusSalaryEmployee(2000, 1.2,true);
         Employee contractEmpleyee = new ContractSalaryEmployee(1000, 2.5);
